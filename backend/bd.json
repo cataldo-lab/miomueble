@@ -1,0 +1,46 @@
+{
+    "product":{
+        "name":{
+            "type": "string",
+            "required": true
+
+        },
+        "price":{
+            "type": "Number",
+            "required": true
+        },
+        "quantity":{
+            "type": "Number",
+            "required": true
+
+        },
+        "description":{
+            "type": "string"
+        },
+        "category":{
+            "type": "Schema.Object.ID",
+            "ref":"Category"
+        },
+
+        "status":{
+            "type": "Schema.Object.ID",
+            "ref":"Status"
+
+},
+
+"category":{
+    "name":{
+        "type":"string",
+        "required":true
+}
+},
+
+"status":{
+    "name":{
+        ""
+    }
+},
+
+
+
+}
