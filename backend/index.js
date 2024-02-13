@@ -15,7 +15,6 @@ app.listen(process.env.PORT,()=>{
 });
 
 mongoose.set('useFindAndModify',false);
-//mongoose.set('useNewUrlPattern',true);
 mongoose.set('useCreateIndex',true);
 mongoose.set('useUnifiedTopology',true);
 

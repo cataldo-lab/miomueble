@@ -1,4 +1,5 @@
 {
+    
     "product":{
         "name":{
             "type": "string",
@@ -27,6 +28,7 @@
             "ref":"Status"
 
 },
+
 
 "category":{
     "name":{
@@ -86,4 +88,4 @@
 }
 
 
-}
+}}
