@@ -37,10 +37,53 @@
 
 "status":{
     "name":{
-        ""
+        "type":"String",
+        "required":true,
+        "minLength":1,
+        "maxLength":100,
+        "enum":[
+            "active",
+            "inactive"
+        ]
     }
 },
 
+"users":{
+    "name":{
+        "type":"String",
+        "required":true
+    },
+    "email":{
+        "type":"String",
+        "required":true
+    },
+    "password":{
+        "type":"String",
+        "required":true
+    },
+    "role":{
+        "type":"String",
+        "enum":[
+            "admin",
+            "user"
+        ],
+        "default":"user"
+
+    },
+    "cart":{
+        "type":"Schema.Object.ID",
+        "ref":"Cart"
+    }
+},
+
+"cart":{
+    "products":{
+        "type":[
+            "Schema.ObjectId"
+        ],
+        "ref":"Product"
+    }
+}
 
 
 }
