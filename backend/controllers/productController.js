@@ -12,12 +12,23 @@ const createProduct=(req,res) =>{
         if (err){
             return res.status(400).send({message:"Error al crear el producto"})
         }
-        return res.status(200).send(product);
+        return res.status(201).send(product);
 
     })
 
 }
 
+const getProducts=(req,res) =>{
+    Product.find({},(err,products)=>{
+        if (err){
+            return res.status(400).send({message:"Error al obtener los productos"})
+        }
+        return res.status(200).send(products);
+
+    })
+}
+
 module.exports = {
-    createProduct
+    createProduct,
+    getProducts
 }
