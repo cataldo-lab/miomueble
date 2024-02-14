@@ -3,14 +3,16 @@ const mongoose = require('mongoose');
 const cors=require('cors');
 require('dotenv').config();
 
-
 const app= express();
+const productRoutes=require('./routes/productRoutes');
+
+app.use(cors());
+app.use(express.json());
+app.options('*',cors());
+app.use('/api',productRoutes);
 
 app.listen(process.env.PORT,()=>{
-    for(let i=0;i<10;i++){
-        console.log('El valor de i es -> ',i);
         console.log('El proyecto esta corriendo en el puerto -> ', process.env.PORT);
-    }
 
 });
 
